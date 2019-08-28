@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CollaborativeDiagram1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CollaborativeDiagram.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
