@@ -15,7 +15,7 @@ import static collaborative.diagram.DiagramServer.SERVER;
 
 public class SelectorsDemo {
     public static void main(String[] args) throws JSONException, URISyntaxException {
-        SERVER.createConnection("http://localhost", 8080, "Johnny Marquez");
+        SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
 
         Element rectangle = new Polygon.Rectangle("rectangle", 0.8);
 

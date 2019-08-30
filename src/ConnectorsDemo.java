@@ -18,7 +18,7 @@ public class ConnectorsDemo {
     static Element irregularPolygon;
 
     public static void main(String[] args) throws JSONException, URISyntaxException {
-        SERVER.createConnection("http://localhost", 8080, "Johnny Marquez");
+        SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
 
         //Element
         circle = new Ellipse.Circle("circle", 0.4);

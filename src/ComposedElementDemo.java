@@ -13,7 +13,7 @@ import static collaborative.diagram.DiagramServer.SERVER;
 
 public class ComposedElementDemo {
     public static void main(String[] args) throws URISyntaxException, JSONException, IllegalAccessException {
-        SERVER.createConnection("http://localhost", 8080, "John Marquez");
+        SERVER.createConnection("http://localhost", 9000, "John Marquez");
 
         Ellipse ellipse = new Ellipse.Circle("ellipse1", 0.4f);
         Rectangle rectangle = new Rectangle("rectangle", 0.8f);

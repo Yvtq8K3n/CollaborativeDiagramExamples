@@ -16,7 +16,7 @@ public class RepresentationCreatorServer {
         //Dar throw de erro se objecto ja existir no cliente
 
         //Initial Setup
-        SERVER.createConnection("http://localhost", 8080, "Johnny Marquez");
+        SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
         DiagramPanel panel = new DiagramPanel();
 
         //Create element and add it to server

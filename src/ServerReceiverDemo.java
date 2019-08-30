@@ -7,7 +7,7 @@ import static collaborative.diagram.DiagramServer.SERVER;
 public class ServerReceiverDemo {
 
     public static void main(String[] args) throws URISyntaxException {
-        SERVER.createConnection("http://localhost", 8080, "Johnny Marquez");
+        SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
         DiagramPanel panel = new DiagramPanel();
 
         JFrame frame = new JFrame();
