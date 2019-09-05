@@ -1,6 +1,8 @@
-import collaborative.diagram.Element.Element;
-import collaborative.diagram.Element.Polygon;
-import collaborative.diagram.Representation.Representation;
+package collaborative.diagram.examples;
+
+import collaborative.diagram.element.Element;
+import collaborative.diagram.element.Polygon;
+import collaborative.diagram.representation.Representation;
 import org.json.JSONException;
 
 import javax.swing.*;
@@ -30,7 +32,6 @@ public class RepresentationDemo {
         panel.add(repBackgroundExamples());
         panel.add(repTextExamples());
         panel.add(repForegroundExamples());
-
 
         JFrame frame = new JFrame();
         frame.setVisible(true);

@@ -1,26 +1,26 @@
+package collaborative.diagram.examples;
+
 import collaborative.diagram.DiagramPanel;
 import collaborative.diagram.DiagramServer;
-import collaborative.diagram.Element.Element;
-import collaborative.diagram.Element.Polygon;
-import collaborative.diagram.Representation.Representation;
+import collaborative.diagram.element.*;
+import collaborative.diagram.element.Polygon;
+import collaborative.diagram.representation.Representation;
 import org.json.JSONException;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Point2D;
 import java.net.URISyntaxException;
 
-import static collaborative.diagram.DiagramServer.SERVER;
-
-public class RepresentationCreatorServer {
+public class RepresentationCreatorDemo {
     public static void main(String[] args) throws JSONException, URISyntaxException, IllegalAccessException {
         //Dar throw de erro se objecto ja existir no cliente
 
         //Initial Setup
-        SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
+        DiagramServer.SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
         DiagramPanel panel = new DiagramPanel();
 
         //Create element and add it to server
-        Element rectangle = new Polygon.Rectangle("Rectangle", 0.8f);;
+        Element rectangle = new Polygon.Rectangle("rectangle", 0.8f);
         DiagramServer.addElement(rectangle);
 
         //Create representations
@@ -29,16 +29,15 @@ public class RepresentationCreatorServer {
 
         Representation repLinearGradientPaint = createElementWithLinearGradientPaint("LinearGradientPaint", rectangle);
         DiagramServer.addRepresentation(repLinearGradientPaint);
-;
+
         Representation repRadialGradientPaint = createElementWithRadialGradientPaint("RadialGradientPaint", rectangle);
         DiagramServer.addRepresentation(repRadialGradientPaint);
 
         Representation repStroke = createElementWithStroke("Stroke", rectangle);
         DiagramServer.addRepresentation(repStroke);
 
-
         //Creating and showing the main frame:
-        final JFrame frame = new JFrame(RepresentationCreatorServer.class.getSimpleName());
+        final JFrame frame = new JFrame(RepresentationCreatorDemo.class.getSimpleName());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //The size of the content pane adds some extra room for moving the labels:

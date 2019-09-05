@@ -1,10 +1,10 @@
+package collaborative.diagram.examples;
+
 import collaborative.diagram.DiagramPanel;
-import collaborative.diagram.Element.Element;
-import collaborative.diagram.Element.Ellipse;
-import collaborative.diagram.Element.Line;
-import collaborative.diagram.Element.Polygon;
-import collaborative.diagram.Representation.Representation;
-import collaborative.diagram.Selector.Selector;
+import collaborative.diagram.element.Element;
+import collaborative.diagram.representation.Representation;
+import collaborative.diagram.selector.Selector;
+import collaborative.diagram.element.*;
 import org.json.JSONException;
 
 import javax.swing.*;
@@ -15,7 +15,7 @@ import static collaborative.diagram.DiagramServer.SERVER;
 
 public class SelectorsDemo {
     public static void main(String[] args) throws JSONException, URISyntaxException {
-        SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
+        SERVER.createConnection("http://3.8.175.171", 9000, "Johnny Marquez");
 
         Element rectangle = new Polygon.Rectangle("rectangle", 0.8);
 

@@ -1,8 +1,9 @@
-import collaborative.diagram.Connector.Connector;
-import collaborative.diagram.Element.Element;
-import collaborative.diagram.Element.Ellipse;
-import collaborative.diagram.Element.Polygon;
-import collaborative.diagram.Representation.Representation;
+package collaborative.diagram.examples;
+
+import collaborative.diagram.connector.Connector;
+import collaborative.diagram.element.*;
+import collaborative.diagram.element.Polygon;
+import collaborative.diagram.representation.*;
 import org.json.JSONException;
 import javax.swing.*;
 import java.awt.*;
@@ -18,8 +19,6 @@ public class ConnectorsDemo {
     static Element irregularPolygon;
 
     public static void main(String[] args) throws JSONException, URISyntaxException {
-        SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
-
         //Element
         circle = new Ellipse.Circle("circle", 0.4);
         rectangle = new Polygon.Rectangle("rectangle", 0.8f);

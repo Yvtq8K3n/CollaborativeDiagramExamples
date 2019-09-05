@@ -1,6 +1,8 @@
+package collaborative.diagram.examples;
+
 import collaborative.diagram.DiagramPanel;
-import collaborative.diagram.Element.Polygon;
-import collaborative.diagram.Representation.Representation;
+import collaborative.diagram.element.Polygon;
+import collaborative.diagram.representation.*;
 import org.json.JSONException;
 
 import javax.swing.*;
@@ -14,7 +16,7 @@ public class OfflineRepresentationDemo {
         DiagramPanel panel = new DiagramPanel();
         panel.add(representation);
 
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame(OfflineRepresentationDemo.class.getSimpleName());
         frame.setSize(600, 600);
         frame.setVisible(true);
         frame.add(panel);

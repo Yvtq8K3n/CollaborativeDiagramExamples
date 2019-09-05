@@ -1,11 +1,13 @@
-import collaborative.diagram.Connector.Connector;
+package collaborative.diagram.examples;
+
+import collaborative.diagram.connector.Connector;
 import collaborative.diagram.DiagramPanel;
-import collaborative.diagram.Edge.Edge;
-import collaborative.diagram.Element.Element;
-import collaborative.diagram.Element.Ellipse;
-import collaborative.diagram.Element.Line;
-import collaborative.diagram.Element.Polygon;
-import collaborative.diagram.Representation.Representation;
+import collaborative.diagram.edge.Edge;
+import collaborative.diagram.element.Element;
+import collaborative.diagram.element.Ellipse;
+import collaborative.diagram.element.Line;
+import collaborative.diagram.element.Polygon;
+import collaborative.diagram.representation.Representation;
 import org.json.JSONException;
 
 import javax.swing.*;
@@ -20,7 +22,7 @@ import static collaborative.diagram.DiagramServer.SERVER;
 public class EdgesDemo {
 
     public static void main(String[] args) throws JSONException, URISyntaxException {
-        SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
+        SERVER.createConnection("http://3.8.175.171", 9000, "Johnny Marquez");
         DiagramPanel panel = new DiagramPanel();
 
         //Element
@@ -34,7 +36,7 @@ public class EdgesDemo {
         Representation repEnd = circleEnd("End", circle);
         Representation repActivity = rectangle("Comprar Casa", rectangle);
 
-        Edge edgeAct1 = new Edge(circle, line(""), triangle, Element.class, Element.class);
+        Edge edgeAct1 = new Edge(line(""), triangle, Element.class, Element.class);
 
         JButton btnOperatorEdge = new JButton("Create Connection");
         btnOperatorEdge.setLocation(0, 0);
@@ -46,15 +48,6 @@ public class EdgesDemo {
             }
         });
         panel.add(btnOperatorEdge);
-        //edgeAct1.addConnection("Ve casa", start.getConnectors().get(1), activity.getConnectors().get(3));
-        //edgeAct1.addConnection("Mudar para casa", activity.getConnectors().get(1), end.getConnectors().get(3));
-        //repStart.setVisible(false);
-
-
-        //repEnd.setVisible(false);
-
-
-        //panel.setSelectedEdge(edgeAct1);
         panel.add(repStart);
         panel.add(repActivity);
         panel.add(repEnd);
