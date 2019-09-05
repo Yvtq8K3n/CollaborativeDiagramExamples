@@ -10,7 +10,7 @@ import static collaborative.diagram.DiagramServer.SERVER;
 
 public class ElementCreatorServerDemo {
     public static void main(String[] args) throws IllegalAccessException, JSONException, URISyntaxException {
-        SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
+        SERVER.createConnection("http://3.8.175.171", 9000, "Johnny Marquez");
 
         //Line
         SERVER.addElement(new Line("line", new Point2D.Double(0, 0.5), new Point2D.Double(1, 0.5)));

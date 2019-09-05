@@ -14,9 +14,7 @@ import java.net.URISyntaxException;
 import static collaborative.diagram.DiagramServer.SERVER;
 
 public class SelectorsDemo {
-    public static void main(String[] args) throws JSONException, URISyntaxException {
-        SERVER.createConnection("http://3.8.175.171", 9000, "Johnny Marquez");
-
+    public static void main(String[] args) throws JSONException {
         Element rectangle = new Polygon.Rectangle("rectangle", 0.8);
 
         Representation repSelectorVertical = new Representation("reoCircle", rectangle,

@@ -10,7 +10,6 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 import java.net.URISyntaxException;
 
-import static collaborative.diagram.DiagramServer.SERVER;
 
 public class ConnectorsDemo {
 

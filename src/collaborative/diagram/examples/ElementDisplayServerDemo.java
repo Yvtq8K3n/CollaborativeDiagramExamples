@@ -22,7 +22,7 @@ public class ElementDisplayServerDemo implements NetworkObserver {
     private JPanel panel;
 
     public static void main(String[] args) throws URISyntaxException, JSONException {
-        DiagramServer.SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
+        DiagramServer.SERVER.createConnection("http://3.8.175.171", 9000, "Johnny Marquez");
         new ElementDisplayServerDemo();
     }
 

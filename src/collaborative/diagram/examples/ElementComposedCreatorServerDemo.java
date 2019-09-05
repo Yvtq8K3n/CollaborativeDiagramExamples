@@ -16,7 +16,7 @@ public class ElementComposedCreatorServerDemo implements NetworkObserver {
     private DiagramPanel panel;
 
     public static void main(String[] args) throws URISyntaxException {
-        DiagramServer.SERVER.createConnection("http://localhost", 9000, "Johnny Marquez");
+        DiagramServer.SERVER.createConnection("http://3.8.175.171", 9000, "Johnny Marquez");
         new ElementComposedCreatorServerDemo();
     }
 
@@ -77,6 +77,11 @@ public class ElementComposedCreatorServerDemo implements NetworkObserver {
 
     @Override
     public void notifyRepresentationCreation(Representation representation) {
+
+    }
+
+    @Override
+    public void notifyRepresentationAlteration(Representation representation) {
 
     }
 }
